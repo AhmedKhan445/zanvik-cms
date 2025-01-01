@@ -16,6 +16,7 @@ import Categories from "./collections/Categories";
 import Settings from "./collections/Settings";
 import Orders from "./collections/Orders";
 import Messages from "./collections/Messages";
+import Varients from "./collections/Varients";
 
 export default buildConfig({
   admin: {
@@ -26,6 +27,7 @@ export default buildConfig({
   collections: [
     Users,
     Products,
+    Varients,
     Media,
     Reviews,
     ProductSections,

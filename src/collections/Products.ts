@@ -25,7 +25,6 @@ const Products: CollectionConfig = {
   slug: "products",
   admin: {
     useAsTitle: "name",
-    defaultColumns: ["name", "stock", "categories", "price"],
   },
   access: {
     read: () => true,
@@ -90,6 +89,27 @@ const Products: CollectionConfig = {
           },
         },
       ],
+    },
+    {
+      name: "varientActive",
+      type: "checkbox",
+      defaultValue: false,
+    },
+    {
+      name: "colorVarients",
+      type: "relationship",
+      relationTo: "varients",
+      required: true,
+      hasMany: true,
+      admin: {
+        condition: (data) => {
+          if (data.varientActive) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+      },
     },
     {
       name: "quantityBundles",

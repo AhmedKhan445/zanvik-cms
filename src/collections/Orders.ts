@@ -117,7 +117,7 @@ const Orders: CollectionConfig = {
         {
           name: "product",
           type: "relationship",
-          relationTo: "products",
+          relationTo: ["products", "varients"],
         },
         {
           name: "quantity",
