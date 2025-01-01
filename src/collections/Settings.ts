@@ -18,7 +18,6 @@ const Settings: GlobalConfig = {
       name: "featuredProduct",
       type: "relationship",
       relationTo: "products",
-      required: true,
     },
     {
       name: "shippingPrice",
