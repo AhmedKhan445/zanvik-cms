@@ -14,7 +14,7 @@ const Orders: CollectionConfig = {
     },
     {
       name: "phone",
-      type: "number",
+      type: "text",
       required: true,
     },
     {

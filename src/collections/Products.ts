@@ -43,8 +43,74 @@ const Products: CollectionConfig = {
       },
       type: "array",
       fields: [
-        { name: "media", type: "upload", relationTo: "media", required: true },
+        {
+          name: "media",
+          type: "upload",
+          relationTo: "media",
+          required: true,
+          filterOptions: {
+            mimeType: { contains: "image" },
+          },
+        },
       ],
+    },
+    {
+      name: "videoActive",
+      type: "checkbox",
+      defaultValue: false,
+    },
+    {
+      name: "thumbnail",
+      type: "upload",
+      relationTo: "media",
+      filterOptions: {
+        mimeType: { contains: "image" },
+      },
+      admin: {
+        condition: (data) => {
+          if (data.videoActive) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+      },
+    },
+    {
+      name: "videomp4",
+      label: "Video (MP4 format)",
+      type: "upload",
+      relationTo: "media",
+      filterOptions: {
+        mimeType: { contains: "video/mp4" },
+      },
+      admin: {
+        condition: (data) => {
+          if (data.videoActive) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+      },
+    },
+    {
+      name: "videowebm",
+      label: "Video (WEBM format)",
+      type: "upload",
+      relationTo: "media",
+      filterOptions: {
+        mimeType: { contains: "video/webm" },
+      },
+      admin: {
+        condition: (data) => {
+          if (data.videoActive) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+      },
     },
     {
       name: "stock",
