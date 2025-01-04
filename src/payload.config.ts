@@ -36,6 +36,11 @@ export default buildConfig({
     Messages,
   ],
   globals: [Settings],
+  upload: {
+    limits: {
+      fileSize: 5000000, // 5MB, written in bytes
+    },
+  },
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
