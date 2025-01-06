@@ -38,10 +38,12 @@ const Products: CollectionConfig = {
     },
     {
       name: "images",
+      type: "array",
+      required: true,
+      minRows: 2,
       admin: {
         initCollapsed: true,
       },
-      type: "array",
       fields: [
         {
           name: "media",
@@ -180,6 +182,8 @@ const Products: CollectionConfig = {
     {
       name: "quantityBundles",
       type: "array",
+      required: true,
+      minRows: 2,
       admin: {
         initCollapsed: true,
       },
