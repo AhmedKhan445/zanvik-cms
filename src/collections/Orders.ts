@@ -44,12 +44,16 @@ const Orders: CollectionConfig = {
           value: "unfulfilled",
         },
         {
-          label: "Fulfilled",
-          value: "fullfilled",
+          label: "Confirmed",
+          value: "confirmed",
         },
         {
-          label: "Cancel Order",
-          value: "cancel",
+          label: "Fulfilled",
+          value: "fulfilled",
+        },
+        {
+          label: "Cancelled",
+          value: "cancelled",
         },
       ],
     },
