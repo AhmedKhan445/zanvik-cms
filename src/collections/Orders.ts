@@ -58,6 +58,13 @@ const Orders: CollectionConfig = {
       ],
     },
     {
+      name: "comment",
+      type: "text",
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
       name: "paymentMethod",
       type: "select",
       admin: {
