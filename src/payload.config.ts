@@ -1,7 +1,6 @@
-import seoPlugin from "@payloadcms/plugin-seo";
 import path from "path";
 
-import { payloadCloud } from "@payloadcms/plugin-cloud";
+import seoPlugin from "@payloadcms/plugin-seo";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { webpackBundler } from "@payloadcms/bundler-webpack";
 import { slateEditor } from "@payloadcms/richtext-slate";
@@ -44,7 +43,6 @@ export default buildConfig({
     schemaOutputFile: path.resolve(__dirname, "generated-schema.graphql"),
   },
   plugins: [
-    payloadCloud(),
     seoPlugin({
       collections: ["products"],
       uploadsCollection: "media",

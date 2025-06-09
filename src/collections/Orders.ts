@@ -55,6 +55,10 @@ const Orders: CollectionConfig = {
           label: "Cancelled",
           value: "cancelled",
         },
+        {
+          label: "Returned",
+          value: "returned",
+        },
       ],
     },
     {
